@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Clima</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <h1>🌤️ Previsão do Clima</h1>
+
+        <!-- Seção de Busca -->
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Digite o nome da cidade..." 
+                class="city-input"
+            >
+            <button id="searchBtn" class="search-btn">Buscar</button>
+        </div>
+
+        <!-- Seção de Resultados (inicialmente vazia) -->
+        <div id="weatherResult" class="weather-result hidden">
+            <h2 id="cityName"></h2>
+            <div class="weather-info">
+                <p>
+                    <strong>Temperatura:</strong> 
+                    <span id="temperature"></span>°C
+                </p>
+                <p>
+                    <strong>Umidade:</strong> 
+                    <span id="humidity"></span>%
+                </p>
+                <p>
+                    <strong>Velocidade do Vento:</strong> 
+                    <span id="windSpeed"></span> km/h
+                </p>
+            </div>
+        </div>
+
+        <!-- Seção de Erro (inicialmente vazia) -->
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
